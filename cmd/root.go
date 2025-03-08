@@ -14,15 +14,15 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "jvm",
+	Use:   "javm",
     Short: "Gestor de versiones de Java",
-    Long: `JVM es una herramienta para administrar múltiples versiones de Java en tu sistema.
+    Long: `JAVM es una herramienta para administrar múltiples versiones de Java en tu sistema.
 
 Permite instalar, cambiar y listar versiones del JDK fácilmente, 
 simulando herramientas como 'nvm' para Node.js.`,
 Run: func(cmd *cobra.Command, args []string) {
-	fmt.Println("Bienvenido a JVM, el gestor de versiones de Java.")
-	fmt.Println("Usa 'jvm --help' para ver los comandos disponibles.")
+	fmt.Println("Bienvenido a JAVM, el gestor de versiones de Java.")
+	fmt.Println("Usa 'javm --help' para ver los comandos disponibles.")
 	},
 }
 
@@ -40,7 +40,7 @@ func init() {
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
 
-	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.jvm.yaml)")
+	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.javm.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.

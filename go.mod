@@ -1,4 +1,4 @@
-module github.com/FranciscoJBrito/jvm
+module github.com/FranciscoJBrito/javm
 
 go 1.24.1
 

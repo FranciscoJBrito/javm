@@ -14,7 +14,7 @@ import (
 	"strings"
 
     "github.com/spf13/cobra"
-    "github.com/FranciscoJBrito/jvm/internal/ui"
+    "github.com/FranciscoJBrito/javm/internal/ui"
 )
 
 // installCmd representa el comando "install"
@@ -123,7 +123,7 @@ func buildDownloadURL(version string) (string, error) {
 
 // Descargar y extraer OpenJDK
 func downloadAndInstallJDK(version, url, osType string) error {
-    installPath := filepath.Join(os.Getenv("HOME"), ".jvm", "versions", version)
+    installPath := filepath.Join(os.Getenv("HOME"), ".javm", "versions", version)
 	fmt.Println("Instalando en:", installPath)
 
     // Definir el nombre del archivo temporal según el SO

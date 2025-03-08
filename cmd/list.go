@@ -6,7 +6,7 @@ import (
     "path/filepath"
 
     "github.com/spf13/cobra"
-    "github.com/FranciscoJBrito/jvm/internal/ui"
+    "github.com/FranciscoJBrito/javm/internal/ui"
 )
 
 // listCmd representa el comando "list"
@@ -24,8 +24,8 @@ func init() {
 
 // listInstalledVersions muestra todas las versiones instaladas de Java
 func listInstalledVersions() {
-    versionsDir := filepath.Join(os.Getenv("HOME"), ".jvm", "versions")
-    currentLink := filepath.Join(os.Getenv("HOME"), ".jvm", "current")
+    versionsDir := filepath.Join(os.Getenv("HOME"), ".javm", "versions")
+    currentLink := filepath.Join(os.Getenv("HOME"), ".javm", "current")
 
     // Leer las versiones instaladas
     versions, err := os.ReadDir(versionsDir)
@@ -43,7 +43,7 @@ func listInstalledVersions() {
     fmt.Println(ui.TitleStyle.Render("📌 Versiones de Java instaladas:"))
 
     if len(versions) == 0 {
-        fmt.Println(ui.ErrorStyle.Render("⚠️ No hay versiones instaladas. Usa `jvm install <versión>` para instalar una."))
+        fmt.Println(ui.ErrorStyle.Render("⚠️ No hay versiones instaladas. Usa `javm install <versión>` para instalar una."))
         return
     }
 
