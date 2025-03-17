@@ -1,7 +1,3 @@
-/*
-Copyright © 2025 Francisco Brito
-
-*/
 package cmd
 
 import (

@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "📥 Descargando JAVM CLI..."
 curl -L -o javm https://github.com/FranciscoJBrito/javm/releases/download/v0.1.0/javm-linux
 chmod +x javm
@@ -9,3 +10,11 @@ if command -v javm &> /dev/null; then
 else
     echo "❌ Error: La instalación falló. Verifica los permisos e intenta de nuevo."
 fi
+
+umask 022
+
+echo "🛠️ Configurando permisos..."
+chmod -R 755 ~/.javm
+find ~/.javm -type f -name "java" -exec chmod +x {} \;
+
+echo "✅ Permisos configurados correctamente."
